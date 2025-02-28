@@ -4,16 +4,7 @@
   padding: 50px;
   font-family: Arial, sans-serif;
 }
-.projects-page {
-  padding: 2rem;
-  text-align: center;
-  scroll-margin-top: 100px; /* Adjust this value based on your navbar height */
-}
-.skills-container .name-perc{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
+
 .skills-container h2 {
   text-align: center;
   font-size: 2rem;
@@ -27,15 +18,19 @@
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px;
   margin: 1rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  gap: 30px; /* Spacing between items */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
   padding-bottom: 2rem;
 }
 
-
+.skills-container .name-perc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
 .skill-item:last-child {
-  margin-bottom: 0; /* Remove margin for the last item */
+  margin-bottom: 0;
 }
 
 .skill-name {
@@ -66,31 +61,86 @@
   margin-top: 5px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .skills-container h2 {
-    font-size: 2rem;
-  }
+/* Large Tablets (900px and below) */
+@media (max-width: 900px) {
   .skills-container {
-    max-width: 100%;
-    margin: 5rem auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    max-width: 90vw;
+    padding: 30px;
+    margin: 3rem auto;
   }
-  .skill-item {
-    margin-bottom: 1px; /* Spacing between skill items */
+
+  .skills-container h2 {
+    font-size: 1.75rem;
   }
-  
 
   .skills-background {
-    padding: 10px;
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .skill-name {
+    font-size: 15px;
+  }
+
+  .progress-percentage {
+    font-size: 13px;
   }
 }
 
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+  .skills-container {
+    max-width: 95vw;
+    padding: 20px;
+    margin: 2rem auto;
+  }
 
+  .skills-container h2 {
+    font-size: 1.5rem;
+  }
 
-@media (max-width: 768px) {
   .skills-background {
-    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .skill-name {
+    font-size: 14px;
+  }
+
+  .progress-percentage {
+    font-size: 12px;
+  }
+
+  .progress-bar {
+    height: 4px; /* Slightly thinner */
+  }
+}
+
+/* Extra Small Mobile (400px and below) */
+@media (max-width: 400px) {
+  .skills-container {
+    padding: 15px;
+    margin: 1.5rem auto;
+  }
+
+  .skills-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .skills-background {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .skill-name {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .progress-percentage {
+    font-size: 11px;
+    margin-top: 3px;
   }
 }

@@ -1,4 +1,5 @@
-// Projects.jsx
+
+import { useCallback } from 'react'; // For memoized link handlers
 import project1 from '../../images/project1.png';
 import project2 from '../../images/project2.png';
 import project3 from '../../images/project3.png';
@@ -65,13 +66,21 @@ const projects = [
 ];
 
 const Projects = () => {
+  const handleLinkClick = useCallback((url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }, []);
+
   return (
-    <div className="projects-page" id='projects'>
+    <div className="projects-page" id="projects">
       <h1>My Projects</h1>
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
-            <img src={project.image} alt={project.title} />
+            <img
+              src={project.image}
+              alt={`${project.title} screenshot`}
+              loading="lazy" // Improve performance
+            />
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <div className="technologies">
@@ -80,10 +89,24 @@ const Projects = () => {
               ))}
             </div>
             <div className="cardlinks">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.link}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(project.link);
+                }}
+                aria-label={`View live demo of ${project.title}`}
+              >
                 Live Demo
               </a>
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.github}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(project.github);
+                }}
+                aria-label={`View GitHub repository for ${project.title}`}
+              >
                 GitHub
               </a>
             </div>

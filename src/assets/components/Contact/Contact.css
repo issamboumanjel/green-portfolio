@@ -22,10 +22,8 @@
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 4rem; /* Add spacing below the heading */
+  margin-bottom: 4rem;
 }
-
-
 
 .contact-form {
   display: flex;
@@ -34,7 +32,7 @@
   justify-content: center;
   gap: 2rem;
   width: 100%;
-  max-width: 500px; /* Set a max-width for better readability */
+  max-width: 500px;
 }
 
 .contact-form input,
@@ -49,18 +47,16 @@
 }
 
 .contact-form textarea {
-  resize: none; /* Disable resizing */
-  height: 150px; /* Set a fixed height */
+  resize: none;
+  height: 150px;
 }
 
-/* Focus states for input and textarea */
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-bottom: 2px solid var(--primary-color);
   outline: none;
 }
 
-/* Placeholder styles */
 .name::placeholder,
 .email::placeholder,
 .msg::placeholder {
@@ -70,7 +66,6 @@
   opacity: 0.8;
 }
 
-/* Submit button styles */
 .contact-form button {
   background-color: var(--primary-color);
   width: 100%;
@@ -85,4 +80,92 @@
 
 .submitbtn:hover {
   background-color: darkgreen;
+}
+
+/* Status message */
+.status {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+/* Tablets (900px and below) */
+@media (max-width: 900px) {
+  .contact {
+    max-width: 90vw;
+    padding: 30px;
+    margin: 2rem auto;
+  }
+
+  .contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-form {
+    max-width: 450px;
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+  .contact {
+    max-width: 95vw;
+    padding: 20px;
+    margin: 1.5rem auto;
+  }
+
+  .contact h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form textarea {
+    height: 120px;
+  }
+
+  .contact-form button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Mobile (400px and below) */
+@media (max-width: 400px) {
+  .contact {
+    padding: 15px;
+    margin: 1rem auto;
+  }
+
+  .contact h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .contact-form textarea {
+    height: 100px;
+  }
+
+  .contact-form button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
 }

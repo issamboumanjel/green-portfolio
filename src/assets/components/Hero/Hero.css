@@ -4,39 +4,45 @@
   --text-color: white;
   --navbar-bg-color: #23463C; /* Default Navbar background color */
 }
-.hero{
+
+.hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: (100vh - 60px);
+  height: calc(100vh - 60px); /* Keep your original height */
   padding: 2rem 5rem;
   font-family: "Roboto" serif;
 }
-.type-animation{
+
+.type-animation {
   font-size: 2rem;
   font-family: "Roboto" serif;
   font-weight: 600;
 }
-.hero h1{
+
+.hero h1 {
   font-family: "Roboto" serif;
   font-size: 2rem;
   font-weight: 900;
 }
-.hero  h1 span{
+
+.hero h1 span {
   color: rgb(239, 209, 38);
 }
-.hero img{
+
+.hero img {
   width: 400px;
-  /* display: none; */
+  height: auto; /* Ensure proportional scaling */
 }
+
 .buttons {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 2rem; /* Adds space between the buttons */
+  margin-top: 2rem;
 }
 
-.hero button{
+.hero button {
   padding: 1rem 2rem;
   font-size: 1.3rem;
   border-radius: 50px;
@@ -47,96 +53,122 @@
 
 .cv {
   display: flex;
-  align-items: center; /* Vertically centers the text and icon */
-
+  align-items: center;
 }
-.hero button:hover{
+
+.hero button:hover {
   background-color: var(--primary-color);
   color: white;
 }
 
-.social-media{
+.social-media {
   font-size: 3rem;
   margin-top: 3rem;
 }
-.social-media a{
+
+.social-media a {
   margin: 2rem;
 }
 
+/* Enhanced Responsiveness */
 
-
-
-/* Media Queries for Responsiveness */
-
-/* Tablets (768px and below) */
-@media (max-width: 768px) {
+/* Large Tablets (900px and below) */
+@media (max-width: 900px) {
   .hero {
-    flex-direction: column-reverse; /* Stack content vertically */
-    text-align: center; /* Center-align text */
-    gap: 2rem;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 2rem 3rem; /* Slightly reduced for better fit */
+    height: auto; /* Allow content to dictate height */
+    gap: 2rem; /* Add spacing between stacked elements */
   }
 
   .hero img {
-    width: 300px; /* Reduce image size for tablets */
-    margin-top: 2rem; /* Add space between text and image */
+    width: 100%; /* Fluid width */
+    max-width: 350px; /* Cap for tablets */
   }
 
   .type-animation {
-    font-size: 1.5rem; /* Reduce font size for tablets */
+    font-size: 1.75rem; /* Slightly larger than before */
   }
 
   .hero h1 {
-    font-size: 1.75rem; /* Reduce heading size for tablets */
-    max-width: 100%;
-    line-height: 1.5;
+    font-size: 1.75rem;
   }
 
- .buttons {
-    display: block;
+  .buttons {
+    flex-direction: column;
+    gap: 1rem; /* Space buttons vertically */
+    justify-content: center;
   }
 
   .hero button {
-    width: 100%; /* Full-width buttons */
-
+    width: 100%; /* Full width */
+    max-width: 250px; /* Cap button width */
+    margin: 0 auto; /* Center buttons */
   }
 
-  .cv {
+  .social-media {
     display: flex;
     justify-content: center;
-    align-items: center; /* Vertically centers the text and icon */
-  
-  }
-  .social-media{
-    font-size: 3rem;
-    margin-top: 3rem;
-  }
-  .social-media a{
-    margin: 1rem;
+    gap: 1.5rem; /* Better spacing than margin */
+    margin: 2rem 0;
   }
 
+  .social-media a {
+    margin: 0; /* Remove individual margins */
+  }
 }
 
-/* Mobile (480px and below) */
-@media (max-width: 480px) {
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
   .hero {
-    padding: 1rem;
+    padding: 1.5rem 1rem; /* Tighter padding */
+    gap: 1.5rem;
   }
 
   .hero img {
-    width: 250px; /* Further reduce image size for mobile */
+    max-width: 250px; /* Smaller for mobile */
   }
 
   .type-animation {
-    font-size: 1.25rem; /* Reduce font size for mobile */
+    font-size: 1.5rem;
   }
 
   .hero h1 {
-    font-size: 1.5rem; /* Reduce heading size for mobile */
+    font-size: 1.5rem;
   }
 
   .hero button {
-    font-size: 1rem; /* Reduce button font size for mobile */
-    padding: 0.75rem 1.5rem; /* Adjust button padding */
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
+/* Extra Small Mobile (400px and below) */
+@media (max-width: 400px) {
+  .hero {
+    padding: 1rem 0.5rem;
+  }
+
+  .hero img {
+    max-width: 200px;
+  }
+
+  .type-animation {
+    font-size: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.25rem;
+  }
+
+  .hero button {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+
+  .social-media {
+    font-size: 2rem;
+    gap: 1rem;
+  }
+}

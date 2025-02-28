@@ -1,35 +1,31 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Navbar.css';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('#about'); // Default active link
+  const [activeLink, setActiveLink] = useState('#about');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const handleLinkClick = (href) => {
-    setActiveLink(href); // Update the active link
-    setIsMenuOpen(false); // Close the menu on mobile after clicking a link
+    setActiveLink(href);
+    setIsMenuOpen(false);
   };
 
-  // Change Navbar background color on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById('hero');
+      const heroSection = document.getElementById('hero'); // Match your Hero section ID
       const navbar = document.querySelector('nav');
 
       if (heroSection && navbar) {
         const heroRect = heroSection.getBoundingClientRect();
-
         if (heroRect.top <= 0 && heroRect.bottom >= 0) {
-          // Hero section is in view
           document.documentElement.style.setProperty('--navbar-bg-color', '#23463c');
         } else {
-          // Hero section is not in view
           document.documentElement.style.setProperty('--navbar-bg-color', 'var(--primary-color)');
         }
       }
@@ -43,7 +39,7 @@ const Navbar = () => {
     <nav>
       <div className="container">
         <div className="logo">
-          <a href="logo">ISAME BOUMANJEL</a>
+          <a href="#hero">ISAME BOUMANJEL</a> {/* Changed to #hero */}
         </div>
         <div className="menu" onClick={toggleMenu}>
           {isMenuOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}

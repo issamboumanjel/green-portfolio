@@ -1,100 +1,164 @@
-/* Container for the entire About section */
 .container1 {
-    display: flex;
-    justify-content: space-between; /* Distributes space between sections */
-    gap: 50px; /* Adds space between the two sections */
-    padding: 40px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px;
-    max-width: 1200px;
-    margin: 40px auto;
-    background: #fff;
-    border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.about {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.about p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about p span {
+  font-weight: 600;
+  color: #000;
+}
+
+.about .learn-more {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about .learn-more:hover {
+  text-decoration: underline;
+}
+
+.basic-info {
+  flex: 1;
+  max-width: 50%;
+}
+
+.basic-info h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.basic-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.basic-info ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+.basic-info ul li span {
+  font-weight: 600;
+  color: #000;
+  margin-right: 15px;
+  min-width: 80px;
+}
+
+.basic-info ul li a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.basic-info ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Tablets (900px and below) */
+@media (max-width: 900px) {
+  .container1 {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+    max-width: 90vw;
   }
-  
-  /* Styling for the "About" section */
-  .about {
-    flex: 1;
-    max-width: 50%;
+
+  .about, .basic-info {
+    max-width: 100%;
+    margin-left: 0; /* Remove unnecessary margin */
   }
-  
-  .about h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #2c3e50;
+
+  .about h2, .basic-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
-  
-  .about p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #555;
+
+  .about p, .basic-info ul li {
+    font-size: 14px;
   }
-  
-  .about p span {
-    font-weight: 600;
-    color: #000;
-  }
-  
-  .about .learn-more {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  .about .learn-more:hover {
-    text-decoration: underline;
-  }
-  
-  /* Styling for the "Basic Information" section */
-  .basic-info {
-    flex: 1;
-    max-width: 50%;
-  }
-  
-  .basic-info h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #2c3e50;
-  }
-  
-  .basic-info ul {
-    list-style: none;
-    padding: 0;
-  }
-  
+
   .basic-info ul li {
-    display: flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Vertically center the content */
+    margin-bottom: 12px;
+  }
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+  .container1 {
+    padding: 20px;
+    gap: 20px;
+    max-width: 95vw;
+    margin: 20px auto;
+  }
+
+  .about h2, .basic-info h2 {
+    font-size: 20px;
     margin-bottom: 15px;
-    font-size: 16px;
-    color: #555;
   }
-  
+
+  .about p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .basic-info ul li {
+    font-size: 13px;
+    flex-direction: column; /* Stack label and value */
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
   .basic-info ul li span {
-    font-weight: 600;
-    color: #000;
-    margin-right: 15px;
-    min-width: 80px; /* Set a fixed width for the span to ensure alignment */
+    margin-right: 0;
+    min-width: 0;
+    margin-bottom: 5px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .container1 {
-      flex-direction: column;
-      padding: 20px;
-      gap: 20px;
-    }
-  
-    .about, .basic-info {
-      max-width: 100%;
-      align-items: center;
-      margin-left: 1rem;
-    }
-  
-    .about h2, .basic-info h2 {
-      font-size: 24px;
-    }
-  
-    .about p, .basic-info ul li {
-      font-size: 14px;
-    }
+}
+
+/* Extra Small Mobile (400px and below) */
+@media (max-width: 400px) {
+  .container1 {
+    padding: 15px;
+    gap: 15px;
   }
+
+  .about h2, .basic-info h2 {
+    font-size: 18px;
+  }
+
+  .about p {
+    font-size: 12px;
+  }
+
+  .basic-info ul li {
+    font-size: 12px;
+  }
+}

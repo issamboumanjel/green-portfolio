@@ -4,35 +4,109 @@
     --text-color: white;
   }
   
-footer{
+  footer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-top: 7rem;
-}
-.media-links{
+    padding: 2rem 5%; /* Add flexible padding */
+  }
+  
+  .media-links {
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-.media-links a{
+    gap: 1rem; /* Use gap instead of margin for consistency */
+  }
+  
+  .media-links a {
     font-size: 3rem;
-    margin: 1rem;
-    color:#a3a2a2 ;
+    color: #a3a2a2;
     transition: 0.3s ease-in;
-}
-.media-links a:hover{
-
-    color:var(--primary-color) ;
-}
-footer p{
+  }
+  
+  .media-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  footer p {
     font-size: 1.5rem;
     font-weight: 700;
     color: #333;
-}
-footer .copyright{
+    margin: 1rem 0 0.5rem; /* Add spacing */
+  }
+  
+  footer .copyright {
     font-size: 1rem;
     font-weight: 400;
-}
+  }
+  
+  /* Tablets (900px and below) */
+  @media (max-width: 900px) {
+    footer {
+      margin-top: 5rem;
+      padding: 1.5rem 3%;
+    }
+  
+    .media-links a {
+      font-size: 2.5rem;
+    }
+  
+    footer p {
+      font-size: 1.25rem;
+    }
+  
+    footer .copyright {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Mobile (600px and below) */
+  @media (max-width: 600px) {
+    footer {
+      margin-top: 4rem;
+      padding: 1rem 2%;
+    }
+  
+    .media-links {
+      gap: 0.75rem;
+    }
+  
+    .media-links a {
+      font-size: 2rem;
+    }
+  
+    footer p {
+      font-size: 1.1rem;
+    }
+  
+    footer .copyright {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Extra Small Mobile (400px and below) */
+  @media (max-width: 400px) {
+    footer {
+      margin-top: 3rem;
+      padding: 0.75rem 1%;
+    }
+  
+    .media-links {
+      gap: 0.5rem;
+      flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+  
+    .media-links a {
+      font-size: 1.75rem;
+    }
+  
+    footer p {
+      font-size: 1rem;
+    }
+  
+    footer .copyright {
+      font-size: 0.75rem;
+    }
+  }
