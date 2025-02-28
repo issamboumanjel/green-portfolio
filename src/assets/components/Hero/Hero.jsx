@@ -50,8 +50,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="left-side">
-        <div className="image">
-          <img src="/src/assets/images/MYPIC.png" alt="" />
+        <div className="image" loading="lazy">
+          <img src="./src/assets/images/MYPIC.png" alt="isame boumanjel" />
         </div>
       </div>
     </section>
