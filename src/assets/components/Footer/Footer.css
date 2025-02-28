@@ -1,0 +1,38 @@
+:root {
+    --primary-color: rgb(55, 140, 63);
+    --secondary-color: rgb(255, 215, 0);
+    --text-color: white;
+  }
+  
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 7rem;
+}
+.media-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.media-links a{
+    font-size: 3rem;
+    margin: 1rem;
+    color:#a3a2a2 ;
+    transition: 0.3s ease-in;
+}
+.media-links a:hover{
+
+    color:var(--primary-color) ;
+}
+footer p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+footer .copyright{
+    font-size: 1rem;
+    font-weight: 400;
+}

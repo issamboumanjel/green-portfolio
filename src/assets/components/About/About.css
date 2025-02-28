@@ -1,0 +1,100 @@
+/* Container for the entire About section */
+.container1 {
+    display: flex;
+    justify-content: space-between; /* Distributes space between sections */
+    gap: 50px; /* Adds space between the two sections */
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+  }
+  
+  /* Styling for the "About" section */
+  .about {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .about h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  .about p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  .about p span {
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .about .learn-more {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .about .learn-more:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for the "Basic Information" section */
+  .basic-info {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .basic-info h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  .basic-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .basic-info ul li {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the content */
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .basic-info ul li span {
+    font-weight: 600;
+    color: #000;
+    margin-right: 15px;
+    min-width: 80px; /* Set a fixed width for the span to ensure alignment */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container1 {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .about, .basic-info {
+      max-width: 100%;
+      align-items: center;
+      margin-left: 1rem;
+    }
+  
+    .about h2, .basic-info h2 {
+      font-size: 24px;
+    }
+  
+    .about p, .basic-info ul li {
+      font-size: 14px;
+    }
+  }

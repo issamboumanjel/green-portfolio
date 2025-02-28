@@ -1,0 +1,142 @@
+:root {
+  --primary-color: rgb(55, 140, 63);
+  --secondary-color: rgb(255, 215, 0);
+  --text-color: white;
+  --navbar-bg-color: #23463C; /* Default Navbar background color */
+}
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: (100vh - 60px);
+  padding: 2rem 5rem;
+  font-family: "Roboto" serif;
+}
+.type-animation{
+  font-size: 2rem;
+  font-family: "Roboto" serif;
+  font-weight: 600;
+}
+.hero h1{
+  font-family: "Roboto" serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.hero  h1 span{
+  color: rgb(239, 209, 38);
+}
+.hero img{
+  width: 400px;
+  /* display: none; */
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem; /* Adds space between the buttons */
+}
+
+.hero button{
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  font-weight: 500;
+  background-color: var(--secondary-color);
+  transition: 0.3s ease-in-out;
+}
+
+.cv {
+  display: flex;
+  align-items: center; /* Vertically centers the text and icon */
+
+}
+.hero button:hover{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.social-media{
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+.social-media a{
+  margin: 2rem;
+}
+
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse; /* Stack content vertically */
+    text-align: center; /* Center-align text */
+    gap: 2rem;
+  }
+
+  .hero img {
+    width: 300px; /* Reduce image size for tablets */
+    margin-top: 2rem; /* Add space between text and image */
+  }
+
+  .type-animation {
+    font-size: 1.5rem; /* Reduce font size for tablets */
+  }
+
+  .hero h1 {
+    font-size: 1.75rem; /* Reduce heading size for tablets */
+    max-width: 100%;
+    line-height: 1.5;
+  }
+
+ .buttons {
+    display: block;
+  }
+
+  .hero button {
+    width: 100%; /* Full-width buttons */
+
+  }
+
+  .cv {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically centers the text and icon */
+  
+  }
+  .social-media{
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+  .social-media a{
+    margin: 1rem;
+  }
+
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem;
+  }
+
+  .hero img {
+    width: 250px; /* Further reduce image size for mobile */
+  }
+
+  .type-animation {
+    font-size: 1.25rem; /* Reduce font size for mobile */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem; /* Reduce heading size for mobile */
+  }
+
+  .hero button {
+    font-size: 1rem; /* Reduce button font size for mobile */
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+  }
+}
+

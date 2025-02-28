@@ -1,0 +1,88 @@
+:root {
+  --primary-color: rgb(55, 140, 63);
+  --secondary-color: rgb(255, 215, 0);
+  --text-color: white;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 80vw;
+  margin: 3rem auto;
+  padding: 50px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 4rem; /* Add spacing below the heading */
+}
+
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 500px; /* Set a max-width for better readability */
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 4px;
+  background: #e4e3e3;
+  color: black;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: none; /* Disable resizing */
+  height: 150px; /* Set a fixed height */
+}
+
+/* Focus states for input and textarea */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom: 2px solid var(--primary-color);
+  outline: none;
+}
+
+/* Placeholder styles */
+.name::placeholder,
+.email::placeholder,
+.msg::placeholder {
+  color: black;
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Submit button styles */
+.contact-form button {
+  background-color: var(--primary-color);
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submitbtn:hover {
+  background-color: darkgreen;
+}
