@@ -2,6 +2,7 @@ import icons from "../../../utils/icons.js";
 import { FaArrowDownLong } from "react-icons/fa6";
 import './Hero.css'
 import { TypeAnimation } from 'react-type-animation';
+import heroImg from '../../images/MYPIC.png';
 const Hero = () => {
   return (
     <section className='hero' id="about">
@@ -51,7 +52,7 @@ const Hero = () => {
       </div>
       <div className="left-side">
         <div className="image" loading="lazy">
-          <img src="./src/assets/images/MYPIC.png" alt="isame boumanjel" />
+          <img src={heroImg} alt="isame boumanjel" />
         </div>
       </div>
     </section>
