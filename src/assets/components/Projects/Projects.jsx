@@ -16,7 +16,7 @@ const projects = [
     image: project1,
     technologies: ["React", "Node.js", "CSS"],
     link: "https://example.com",
-    github: "https://github.com/yourusername/project1",
+    github: "https://github.com/issamboumanjel",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const projects = [
     image: project2,
     technologies: ["Vanilla Js", "Html", "CSS"],
     link: "https://example.com",
-    github: "https://github.com/yourusername/project1",
+    github: "https://github.com/issamboumanjel",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const projects = [
     image: project3,
     technologies: ["React", "CSS"],
     link: "https://example.com",
-    github: "https://github.com/yourusername/project1",
+    github: "https://github.com/issamboumanjel",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const projects = [
     image: project4,
     technologies: ["React", "Tailwind CSS"],
     link: "https://example.com",
-    github: "https://github.com/yourusername/project1",
+    github: "https://github.com/issamboumanjel",
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const projects = [
     image: project5,
     technologies: ["React", "Node.js", "CSS"],
     link: "https://example.com",
-    github: "https://github.com/yourusername/project1",
+    github: "https://github.com/issamboumanjel",
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const projects = [
     image: project6,
     technologies: ["React", "Node.js", "CSS"],
     link: "https://example.com",
-    github: "https://github.com/yourusername/project1",
+    github: "https://github.com/issamboumanjel",
   },
 ];
 

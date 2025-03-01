@@ -44,10 +44,42 @@ const Hero = () => {
           </button>
         </div>
         <div className="social-media">
-          <a href=""><icons.FaFacebook /></a>
-          <a href=""><icons.FaInstagramSquare /></a>
-          <a href=""><icons.FaGithub /></a>
-          <a href=""><icons.FaLinkedin /></a>
+          {/* <a href="https://www.facebook.com/issam.boumanjel"><icons.FaFacebook /></a>
+          <a href="https://www.instagram.com/issamboumanjel/"><icons.FaInstagramSquare /></a>
+          <a href="https://github.com/issamboumanjel"><icons.FaGithub /></a>
+          <a href="https://www.linkedin.com/in/isame-boumanjel-b2903a155/"><icons.FaLinkedin /></a> */}
+          <a
+          href="https://www.facebook.com/issam.boumanjel"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit my Facebook profile"
+        >
+          <icons.FaFacebook />
+        </a>
+        <a
+          href="https://www.instagram.com/issamboumanje"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit my Instagram profile"
+        >
+          <icons.FaInstagramSquare />
+        </a>
+        <a
+          href="https://github.com/issamboumanjel"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit my GitHub profile"
+        >
+          <icons.FaGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/isame-boumanjel-b2903a155"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit my LinkedIn profile"
+        >
+          <icons.FaLinkedin />
+        </a>
         </div>
       </div>
       <div className="left-side">

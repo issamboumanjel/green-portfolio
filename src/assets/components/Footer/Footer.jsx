@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer>
       <div className="media-links">
-        <a
-          href="https://facebook.com/yourprofile"
+      <a
+          href="https://www.facebook.com/issam.boumanjel"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit my Facebook profile"
@@ -15,7 +15,7 @@ const Footer = () => {
           <icons.FaFacebook />
         </a>
         <a
-          href="https://instagram.com/yourprofile"
+          href="https://www.instagram.com/issamboumanje"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit my Instagram profile"
@@ -23,7 +23,7 @@ const Footer = () => {
           <icons.FaInstagramSquare />
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/issamboumanjel"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit my GitHub profile"
@@ -31,7 +31,7 @@ const Footer = () => {
           <icons.FaGithub />
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/isame-boumanjel-b2903a155"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit my LinkedIn profile"
